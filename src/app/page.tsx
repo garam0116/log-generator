@@ -13,6 +13,7 @@ import {
 } from "./utils/storage";
 import { useSearchParams } from "next/navigation";
 import LogEditor from "./components/LogEdtior";
+import IntroGenerator from "./components/IntroGenerator";
 
 const { Title } = Typography;
 const { Content } = Layout;
@@ -128,6 +129,16 @@ const Main = () => {
             onConfigChange={handleConfigChange}
             onCopyToClipboard={copyToClipboard}
           />
+        </>
+      ),
+    },
+    {
+      key: "2",
+      label: "소개글 생성기",
+      children: (
+        <>
+          <Title level={2}>소개글 생성기</Title>
+          <IntroGenerator />
         </>
       ),
     },
